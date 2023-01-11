@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NBA Sport Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Prem Patel</a>
+			</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 2022</span>
+									<ul class="actions special">
+										<li><a href="https://github.com/prempatell/Sports-Analytics-NBA" target="_blank" class="button large">View GitHub Repository</a></li>
+									</ul>
+									<h1>NBA Sports Analytics</h1>
+									<p>In this project we scraped basketball’s meta, player and team data in order to find useful insights<br>
+										Then designed a multiplayer Basketball Simulator WEB APP using our statistical predictive models<br>
+										Below I have outlined the steps in detail: </p>
+								</header>
+								<a href="http://www.datanerds.lol" target="_blank" class="image main"><img src="images/nbasports.png" alt="" /></a>
+							
+								<p>
+									<p>
+										The sources utilized to scrape the data were from NBA.COM and Basketball-Refrence. 
+										Data on these websites are provided by ‘SPORTS RADAR’, (A Sports Technology Company),
+										the official stats partner for the National Basketball Association (NBA). We scraped the data using BeautifulSoup4 library in python. Then we performed Player Analysis, Team Analysis, 
+										and Meta-Game Analysis in order to get a better understanding of what and why certain 
+										tactics/strategies work. The following questions were answered: 
+									</p>
+
+									<h3>How does player continuity affect the overall success of the team?</h3>
+
+									<p>One of the most frequently overlooked ingredients in the recipe for winning a championship has been team consistency. 
+										In order to secure a win is it important for NBA teams to stick to the same players so that the teams can evolve together and do better?
+										
+									</p>
+									<img src="images/graph_1.jpg" alt="" />
+									<p>
+										Above graph represents data from Season 1975-2022. After analyzing we can concluded that there exists a postive correlation between Winning Percentage and a team's continuity percentage. 
+										As a result it is more likely for a team that sticks together to secure a win for in that season.
+									</p>
+									<img src="images/graph_2.jpg" alt="" />
+									<p>
+										From the second graph, we can observe the ratio of Winning Percentage to Continuity over all the seasons, sorted from highest to lowest average ratio. 
+										This figure focuses on teams that have the least roster retention, and acts as a complementary metric for the previous scatterplots. 
+										The greater the ratio, on average, the more wins a team is able to produce with fewer returning players. 
+										You can see that this metric is highest for the Miami Heat and the L.A. Lakers.
+									</p>
+
+									<h3>How does playing defensively vs offensively impact a teams overall season?</h3>
+
+									<p>There is a common understanding in the NBA that defense has a bigger impact on the overall team success compared to offense. 
+										On multiple occasions commentators and NBA legends like Bill Russel have been quoted saying "Offense wins games, Defense wins Championships.
+										In order to test this theory we used SQL Alchemy and pandas library in python to insert the csv data into our database and then ran SQL queries to get the results. 
+	
+									</p>
+									<img src="images/graph_3.jpg" alt="" />
+									<p>
+										The plotted bar graph concludes that there are slightly more defensive teams winning the NBA Championships, but it is a really slight difference, suggesting the concept 
+										of "Defense wins Championships" is fairly unfounded. 
+									</p>
+
+									<h3>How do injuries affect player contract prices?</h3>
+
+									<p>
+										Injuries and the notoriously harsh NBA schedule goes hand in hand. Many players have been affected by the "injury bug" due to this high-paced schedule 
+										and have lost money and health over the years. So here we have analyzed the average amount of money a player loses due to injuries.
+									</p>
+									<img src="images/graph_5.jpg" alt="" />
+									<p>
+										The data above from season 2012-2022 represents the players split into two categories based on the frequency of injuries compared to the sum of the salaries.
+										The current players who have been injured more than 20 times over the last 10 years were categorized as High frequency of injury, while all other players have been categorized as Low frequency
+										We conclude that players that have a high frequency of getting injured have ~25% of the contract value of low injury frequency players.
+									</p>
+									
+									<div class="col-6 col-12-small">
+										<h3>Fantasy Game Simulator</h3>
+									<p>
+										The culmination of the entire group's work from data collection to model building can be seen in this component of our project.
+										The game allows users to pick a team of ten from a selection of current players in the 2022-2023 with a predetermined salary cap. The teams built by the players can go then go head to head against one another in a simulated game with the click of a button.
+										The results of the simulated matchup are computed through models built using Multiple Linear Regression and random sampling, providing us with a breakdown of scores similar to those of an actual NBA game.
+									</p>
+									<img src="images/graph_6.jpg" alt="" style="width:800px;height:600px;"/>
+									<p>
+										The data above from season 2012-2022 represents the players split into two categories based on the frequency of injuries compared to the sum of the salaries.
+										The current players who have been injured more than 20 times over the last 10 years were categorized as High frequency of injury, while all other players have been categorized as Low frequency
+										We conclude that players that have a high frequency of getting injured have ~25% of the contract value of low injury frequency players.
+									</p>
+										<h3>Overview</h3>
+										<ul>
+											<li>Server</li>
+											<p>The server is the location where the user login credentials, the details to create a new user and database is hosted where querying is done on demand based on the specific player selected and requirement of the current player statistics.</p>
+											<li>Models</li>
+											<p>The models make up the component of the web application responsible for simulating the basketball game outcomes. The data used in this model can be found under the header "Parsing per game statistics per player for each team".
+												By predicting the individual player scores of a particular roster (which consists of three-pointers scored, two-pointers scored, etc.), we are able to simulate semi-realistic game outcomes and determine a winner.
+											</p>
+											<li>Web Application Client</li>
+											<p>The web app client is built with `React`. The web app has components like player selection for a team roster, viewing the fantasy team statistics and game simulation.</p>
+										</ul>
+									</div>
+
+
+								</p>
+								<ul class="actions special">
+									<li><a href="http://www.datanerds.lol" target="_blank" class="button large">Simulator Web App</a></li>
+								</ul>
+								<p>
+
+								</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class = "split contact">
+							<section class = "alt">
+								<h3>Address</h3>
+								<p>5400 Dalhousie Dr NW<br />
+								Calgary, AB T3A 2B4</p>
+							</section>
+							<section >
+								<h3>Phone</h3>
+								<p><a href="#">(587) 968-8216</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">prempatel.ca@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									
+									<li><a href="https://www.linkedin.com/in/prempatel2001/" target = "_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/prempatell" target = "_blank"class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
