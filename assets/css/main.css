@@ -221,7 +221,8 @@ video {
 
 	h3 {
 		font-size: 1.25rem;
-		margin: 0 0 1.5rem 0;
+		margin: -1rem -2rem -2.5rem 0;
+		text-align: center;
 	}
 
 	h4 {
@@ -2999,6 +3000,8 @@ video {
 			height: 1;
 			margin: 0 0 1rem 0;
 			position: relative;
+			font-weight: bold;
+			
 		}
 
 		header > p {
@@ -4030,13 +4033,13 @@ video {
 /* Footer */
 
 	#footer {
-		color: #717981;
+		color: #000000;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		background-color: #f5f5f5;
-		color: #909498;
+		color: #000000;
 		cursor: default;
 		position: relative;
 		margin: 0 auto;
@@ -4046,11 +4049,11 @@ video {
 	}
 
 		#footer input, #footer select, #footer textarea {
-			color: #717981;
+			color: #6ba5de;
 		}
 
 		#footer a {
-			color: #717981;
+			color: #000000;
 			border-bottom-color: rgba(113, 121, 129, 0.5);
 		}
 
@@ -4060,11 +4063,11 @@ video {
 			}
 
 		#footer strong, #footer b {
-			color: #717981;
+			color: #000000;
 		}
 
 		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
-			color: #717981;
+			color: #000000;
 		}
 
 		#footer blockquote {
@@ -4303,7 +4306,7 @@ video {
 
 				#footer > section.split > section {
 					padding: 5rem 5rem 5rem 5rem ;
-					border-top: solid 2px #e2e2e2;
+					/*border-top: solid 2px #e2e2e2; */
 					
 				}
 
