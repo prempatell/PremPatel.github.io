@@ -3015,7 +3015,7 @@ video {
 		}
 
 		header > h2 + p {
-			font-size: 1rem;
+			font-size: 1.2rem;
 			margin-top: -0.75rem;
 		}
 
@@ -3044,8 +3044,8 @@ video {
 			}
 
 			header.major > .date {
-				font-size: 1rem;
-				margin: 0 0 4rem 0;
+				font-size: 1.2rem;
+				margin: 0 0 2rem 0;
 			}
 
 				header.major > .date:before, header.major > .date:after {
@@ -3868,7 +3868,7 @@ video {
 		}
 
 			#main > .post header.major > .date {
-				margin-top: -2rem;
+				margin-top: -3rem;
 			}
 
 			#main > .post header.major > h1, #main > .post header.major h2 {
